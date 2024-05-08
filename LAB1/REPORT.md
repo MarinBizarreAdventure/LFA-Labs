@@ -1,4 +1,4 @@
-# Laboratory Work Nr.2: Regular Grammars
+# Laboratory Work Nr.1: Regular Grammars
 
 **Course:** Formal Languages & Finite Automata  
 **Student:** Negai Marin  
