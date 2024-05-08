@@ -21,19 +21,20 @@ In this laboratory work, we delve into the fundamental concepts of formal langua
     c. Create functionality to convert a Grammar object to a Finite Automaton.
     d. Incorporate a method in the Finite Automaton to verify if an input string can be obtained through state transitions.
 
-## Implementation:
+## Implementation Description
 
-To fulfill the objectives of this laboratory assignment, the following steps were undertaken:
+### Grammar Class Creation:
+To meet the objectives of this laboratory assignment, a Python class named `Grammar` was created to represent grammars. This class serves as a blueprint for defining various grammars, featuring attributes such as `Vn` (non-terminal symbols), `Vt` (terminal symbols), `P` (productions), and `S` (start symbol). The pivotal method `generate_string()` utilizes `generate_string_helper()` to generate valid strings based on the grammar's production rules.
 
-1. **Grammar Class Creation:** A Python class named `Grammar` was created, serving as a blueprint for various grammars. It features attributes with descriptive names and a crucial method, `generateString()`, which utilizes `generateStringHelper()` to generate valid strings based on the grammar's rules.
+### String Generation:
+Utilizing the `Grammar` class, five strings were generated in the main class using a loop and a `Grammar` object. The `generate_string()` method of the `Grammar` class facilitates the generation of valid strings conforming to the language described by the grammar. This functionality demonstrates the practical application of grammar rules in generating language constructs.
 
-2. **String Generation:** Utilizing the `Grammar` class, five strings were generated in the main class using a loop and a Grammar object.
+### FiniteAutomaton Class Development:
+A class named `FiniteAutomaton` was crafted to represent finite automata. This class encapsulates essential attributes and methods, including `Q` (set of states), `Sigma` (alphabet), `delta` (transition function), `q0` (initial state), and `F` (set of final states). Notably, a method was added to facilitate the transformation of a `Grammar` object into a `Finite Automaton`. Delta, representing transitions, is represented by a dictionary structure.
 
-3. **FiniteAutomaton Class Development:** A class named `FiniteAutomaton` was crafted, featuring specific attributes and methods. Notably, a method was added to facilitate the transformation of a Grammar object into a Finite Automaton. Delta is represented by a dictionary.
+### String Verification:
+The final implementation included a method in the `FiniteAutomaton` class to determine whether a given string belongs to the constructed Finite Automaton. This method iterates through each symbol of the input string, checking for appropriate transitions using the `find_transitions()` method. By leveraging the transition function defined by delta, the automaton efficiently validates input strings against its language.
 
-4. **String Verification:** The final implementation included a method to determine whether a given string belongs to the constructed Finite Automaton. This method iterates through each symbol, checking for appropriate transitions using the `findTransitions()` method.
-
-## Conclusions:
-
-This laboratory work provided invaluable hands-on experience in grasping the core concepts of formal languages, particularly regular grammars. By working through concrete examples, we gained insights into how these concepts manifest in practice. Additionally, the process of converting a Grammar into a Finite Automaton and utilizing it to validate strings deepened our understanding of language recognition and manipulation. These experiences lay a solid foundation for tackling future laboratory assignments with confidence.
+### Conclusions:
+This laboratory work provided invaluable hands-on experience in grasping the core concepts of formal languages, particularly regular grammars. By implementing concrete examples, we gained insights into how these concepts manifest in practice. The process of converting a `Grammar` into a `Finite Automaton` and utilizing it to validate strings deepened our understanding of language recognition and manipulation. These experiences lay a solid foundation for tackling future laboratory assignments with confidence.
 
